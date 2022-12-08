@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- navigation bar code-->
+     <nav class="main-nav">
+        <ul>
+         <li><a href="index.html"> Home </a></li>
+         <li><a href="chest.html">Chest</a></li>
+         <li><a href="arms.html"> Arms</a></li>
+         <li><a href="legs.html">Legs</a></li>
+         <li><a href="back.html"> Back </a></li>
+        </ul>
+      </nav>
+
+    <button class="tablink" onclick="openPage('curl', this, 'red')" id="defaultOpen">Curl</button>
+    <button class="tablink" onclick="openPage('hammercurl', this, 'green')">Hammer Curl</button>
+    <button class="tablink" onclick="openPage('triceppulldown', this, 'blue')">Tricep Pulldown</button>
+    <button class="tablink" onclick="openPage('dbricepextension', this, 'orange')">DB Tricep Extension</button>
+
+    <div id="curl" class="tabcontent">
+        <div class="container">
+            <img src="images/curl.jpeg" alt="curl image" style="width:100%;">
+                 <div class="text-block">
+                    <h4>Curl</h4>
+                    <p>Lorem ipsum</p>
+            </div>
+        </div>
+     </div>
+
+     <div id="hammercurl" class="tabcontent">
+        <div class="container">
+            <img src="images/hammercurl.jpeg" alt="hammer curl image" style="width:100%;">
+                 <div class="text-block">
+                    <h3> Hammer Curl</h3>
+                    <p>Lorem Ipsum</p>
+            </div>
+        </div>
+     </div>
+
+     <div id="triceppulldown" class="tabcontent">
+        <div class="container">
+            <img src="arms/ticeppulldown.jpeg" alt=" tricep pulldown image" style="width:100%;">
+                 <div class="text-block">
+                    <h3>Incline DB curl</h3>
+                    <p>Lorem Ipsum</p>
+            </div>
+        </div>
+     </div>
+
+     <div id="dbricepextension" class="tabcontent">
+        <div class="container">
+            <img src="images/DBtricepextension.jpeg" alt="DB tricep extension image" style="width:100%;">
+                 <div class="text-block">
+                    <h3>DB Tricep Extension </h3>
+                    <p>Lorem Ipsum</p>
+            </div>
+        </div>
+     </div>
+
+
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- navigation bar code-->
+     <nav class="main-nav">
+        <ul>
+         <li><a href="index.html"> Home </a></li>
+         <li><a href="chest.html">Chest</a></li>
+         <li><a href="arms.html"> Arms</a></li>
+         <li><a href="legs.html">Legs</a></li>
+         <li><a href="back.html"> Back </a></li>
+        </ul>
+      </nav>
+
+    <button class="tablink" onclick="openPage('squat', this, 'red')" id="defaultOpen" >Squat</button>
+    <button class="tablink" onclick="openPage('legpress', this, 'green')" >Leg Press</button>
+    <button class="tablink" onclick="openPage('legextension', this, 'blue')">Leg Extension</button>
+    <button class="tablink" onclick="openPage('hamstringcurl', this, 'orange')">Hamstring Curl</button>
+
+
+    <div id="squat" class="tabcontent">
+      <div class="container">
+          <img src="images/squat.jpeg" alt="squat image" style="width:100%;">
+               <div class="text-block">
+                  <h4>Squat</h4>
+                  <p>Lorem ipsum</p>
+          </div>
+      </div>
+   </div>
+
+   <div id="legpress" class="tabcontent">
+      <div class="container">
+          <img src="images/legpress.jpeg" alt="leg press image" style="width:100%;">
+               <div class="text-block">
+                  <h3> Leg Press</h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div> 
+   </div>
+
+   <div id="legextension" class="tabcontent">
+      <div class="container">
+          <img src="images/legextension.jpeg" alt=" leg extensions image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Leg Extenisons </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
+
+   <div id="hamstringcurl" class="tabcontent">
+      <div class="container">
+          <img src="images/hamstringcurl.jpeg" alt="hamstring Curl image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Hamstring Curl </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
+
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- navigation bar code-->
+     <nav class="main-nav">
+        <ul>
+         <li><a href="index.html"> Home </a></li>
+         <li><a href="chest.html">Chest</a></li>
+         <li><a href="arms.html"> Arms</a></li>
+         <li><a href="legs.html">Legs</a></li>
+         <li><a href="back.html"> Back </a></li>
+        </ul>
+      </nav>
+
+    <button class="tablink" onclick="openPage('row', this, 'red')" id="defaultOpen" >Row</button>
+    <button class="tablink" onclick="openPage('latpulldown', this, 'green')" >Lat Pulldown</button>
+    <button class="tablink" onclick="openPage('seatedrow', this, 'blue')">Seated Row</button>
+    <button class="tablink" onclick="openPage('deadlift', this, 'orange')">Deadlift</button>
+
+    <div id="row" class="tabcontent">
+      <div class="container">
+          <img src="images/row.jpeg" alt="row image" style="width:100%;">
+               <div class="text-block">
+                  <h4>Row</h4>
+                  <p>Lorem ipsum</p>
+          </div>
+      </div>
+   </div>
+
+   <div id="latpulldown" class="tabcontent">
+      <div class="container">
+          <img src="images/latpulldown.jpeg" alt="lat pulldown image" style="width:100%;">
+               <div class="text-block">
+                  <h3> Lat Pulldown</h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div> 
+   </div>
+
+   <div id="seatedrow" class="tabcontent">
+      <div class="container">
+          <img src="images/seatedrow.jpeg" alt=" seated row image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Seated Row </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
+
+   <div id="deadlift" class="tabcontent">
+      <div class="container">
+          <img src="images/deadlift.jpeg" alt="Deadlift image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Deadlift </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
+
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>

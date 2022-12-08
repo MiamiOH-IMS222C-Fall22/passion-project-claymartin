@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- navigation bar code-->
+    <nav class="main-nav">
+        <ul>
+         <li><a href="index.html"> Home </a></li>
+         <li><a href="chest.html">Chest</a></li>
+         <li><a href="arms.html"> Arms</a></li>
+         <li><a href="legs.html">Legs</a></li>
+         <li><a href="back.html"> Back </a></li>
+        </ul>
+      </nav>
+
+     <button class="tablink" onclick="openPage('chest', this, 'red')"id="defaultOpen">Bench Press</button>
+     <button class="tablink" onclick="openPage('chestfly', this, 'green')" >Chest Fly</button>
+     <button class="tablink" onclick="openPage('dbpress', this, 'blue')">DB Press</button>
+     <button class="tablink" onclick="openPage('inclinedbpress', this, 'orange')">Incline DB Press</button>
+
+
+     <div id="chest" class="tabcontent">
+        <div class="container">
+            <img src="images/benchpress.jpeg" alt="benchpress image" style="width:100%;">
+                 <div class="text-block">
+                    <h4>Benchpress</h4>
+                    <p>Lorem ipsum</p>
+            </div>
+        </div>
+     </div>
+
+     <div id="chestfly" class="tabcontent">
+        <div class="container">
+            <img src="images/chestfly.jpeg" alt="chestfly image" style="width:100%;">
+                 <div class="text-block">
+                    <h3>Chest Fly</h3>
+                    <p>Lorem Ipsum</p>
+            </div>
+        </div>
+     </div>
+
+     <div id="dbpress" class="tabcontent">
+        <div class="container">
+            <img src="images/dbpress.jpeg" alt="dbpress image" style="width:100%;">
+                 <div class="text-block">
+                    <h3>Dumbbell Press</h3>
+                    <p>Lorem Ipsum</p>
+            </div>
+        </div>
+     </div>
+
+     <div id="inclinedbpress" class="tabcontent">
+        <div class="container">
+            <img src="images/inclinedbpress.jpeg" alt="inclinedbpress image" style="width:100%;">
+                 <div class="text-block">
+                    <h3>Incline DB Press</h3>
+                    <p>Lorem Ipsum</p>
+            </div>
+        </div>
+     </div>
+
+
+     <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>
