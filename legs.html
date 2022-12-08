@@ -16,30 +16,51 @@
         </ul>
       </nav>
 
-    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+    <button class="tablink" onclick="openPage('squat', this, 'red')" id="defaultOpen" >Squat</button>
+    <button class="tablink" onclick="openPage('legpress', this, 'green')" >Leg Press</button>
+    <button class="tablink" onclick="openPage('legextension', this, 'blue')">Leg Extension</button>
+    <button class="tablink" onclick="openPage('hamstringcurl', this, 'orange')">Hamstring Curl</button>
 
-    <div id="Home" class="tabcontent">
-        <h3>Home</h3>
-        <p>Home is where the heart is..</p>
-    </div>
 
-    <div id="News" class="tabcontent">
-        <h3>News</h3>
-        <p>Some news this fine day!</p>
-    </div>
+    <div id="squat" class="tabcontent">
+      <div class="container">
+          <img src="images/squat.jpeg" alt="squat image" style="width:100%;">
+               <div class="text-block">
+                  <h4>Squat</h4>
+                  <p>Lorem ipsum</p>
+          </div>
+      </div>
+   </div>
 
-    <div id="Contact" class="tabcontent">
-        <h3>Contact</h3>
-        <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
+   <div id="legpress" class="tabcontent">
+      <div class="container">
+          <img src="images/legpress.jpeg" alt="leg press image" style="width:100%;">
+               <div class="text-block">
+                  <h3> Leg Press</h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div> 
+   </div>
 
-    <div id="About" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
-    </div>
+   <div id="legextension" class="tabcontent">
+      <div class="container">
+          <img src="images/legextension.jpeg" alt=" leg extensions image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Leg Extenisons </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
+
+   <div id="hamstringcurl" class="tabcontent">
+      <div class="container">
+          <img src="images/hamstringcurl.jpeg" alt="hamstring Curl image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Hamstring Curl </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
 
     <script>
         function openPage(pageName,elmnt,color) {

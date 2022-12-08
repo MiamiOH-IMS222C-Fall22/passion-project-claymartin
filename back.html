@@ -16,30 +16,50 @@
         </ul>
       </nav>
 
-    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+    <button class="tablink" onclick="openPage('row', this, 'red')" id="defaultOpen" >Row</button>
+    <button class="tablink" onclick="openPage('latpulldown', this, 'green')" >Lat Pulldown</button>
+    <button class="tablink" onclick="openPage('seatedrow', this, 'blue')">Seated Row</button>
+    <button class="tablink" onclick="openPage('deadlift', this, 'orange')">Deadlift</button>
 
-    <div id="Home" class="tabcontent">
-        <h3>Home</h3>
-        <p>Home is where the heart is..</p>
-    </div>
+    <div id="row" class="tabcontent">
+      <div class="container">
+          <img src="images/row.jpeg" alt="row image" style="width:100%;">
+               <div class="text-block">
+                  <h4>Row</h4>
+                  <p>Lorem ipsum</p>
+          </div>
+      </div>
+   </div>
 
-    <div id="News" class="tabcontent">
-        <h3>News</h3>
-        <p>Some news this fine day!</p>
-    </div>
+   <div id="latpulldown" class="tabcontent">
+      <div class="container">
+          <img src="images/latpulldown.jpeg" alt="lat pulldown image" style="width:100%;">
+               <div class="text-block">
+                  <h3> Lat Pulldown</h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div> 
+   </div>
 
-    <div id="Contact" class="tabcontent">
-        <h3>Contact</h3>
-        <p>Get in touch, or swing by for a cup of coffee.</p>
-    </div>
+   <div id="seatedrow" class="tabcontent">
+      <div class="container">
+          <img src="images/seatedrow.jpeg" alt=" seated row image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Seated Row </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
 
-    <div id="About" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
-    </div>
+   <div id="deadlift" class="tabcontent">
+      <div class="container">
+          <img src="images/deadlift.jpeg" alt="Deadlift image" style="width:100%;">
+               <div class="text-block">
+                  <h3>Deadlift </h3>
+                  <p>Lorem Ipsum</p>
+          </div>
+      </div>
+   </div>
 
     <script>
         function openPage(pageName,elmnt,color) {
